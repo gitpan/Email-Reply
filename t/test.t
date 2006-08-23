@@ -58,8 +58,10 @@ my $complex = reply to         => $simple,
                     attrib     => 'Quoth the raven:',
                     body       => $response;
 $complex->header_set(Date => undef);
+$complex->header_set('Content-ID' => undef);
 $complex->boundary_set('boundary42');
 $complex->parts_set([map {$_->header_set(Date=>undef);$_} $complex->parts]);
+$complex->parts_set([map {$_->header_set('Content-ID'=>undef);$_} $complex->parts]);
 is $complex->as_string, <<'__COMPLEX__', 'complex reply matches';
 From: Casey West <human@earth.sol>
 To: <alien@titan.saturn.sol>
@@ -85,6 +87,7 @@ Quoth the raven:
 
 
 
+
 --boundary42
 MIME-Version: 1.0
 Content-Type: message/rfc822; charset="us-ascii"
@@ -100,6 +103,7 @@ Are you out there?
 
 -- 
 The New Ones
+
 
 
 

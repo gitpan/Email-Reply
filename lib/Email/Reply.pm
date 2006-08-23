@@ -1,5 +1,4 @@
 package Email::Reply;
-# $Id: Reply.pm,v 1.1 2004/07/10 04:08:16 cwest Exp $
 use strict;
 
 use Email::Abstract;
@@ -10,7 +9,7 @@ use Email::Address;
 use base qw[Exporter];
 
 use vars qw[$VERSION $CLASS @EXPORT];
-$VERSION = (qw$Revision: 1.1 $)[1];
+$VERSION = '1.200';
 $CLASS   = __PACKAGE__;
 @EXPORT  = qw[reply];
 
