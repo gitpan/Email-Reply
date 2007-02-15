@@ -6,4 +6,5 @@ README
 t/pod.t
 t/pod-coverage.t
 t/test.t
+LICENSE
 META.yml                                 Module meta-data (added by MakeMaker)

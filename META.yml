@@ -1,16 +1,19 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Email-Reply
-version:      1.200
-version_from: lib/Email/Reply.pm
-installdirs:  site
-requires:
+--- #YAML:1.0
+name:                Email-Reply
+version:             1.201
+abstract:            Reply to a Message
+license:             perl
+generated_by:        ExtUtils::MakeMaker version 6.31
+distribution_type:   module
+requires:     
     Email::Abstract:               2.01
     Email::Address:                1.80
     Email::MIME:                   1.82
     Email::MIME::Creator:          1.41
     Email::MIME::Modifier:         1.42
     Test::More:                    0.47
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
+author:
+    - Casey West <casey@geeknest.com>
